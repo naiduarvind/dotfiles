@@ -11,7 +11,7 @@
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/naiduarvind/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -60,7 +60,7 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 When setting up a new Mac, you may want to set some sensible macOS defaults:
 
 ```bash
-./.macos
+$ ./.macos
 ```
 
 ### Install Homebrew formulae
@@ -68,12 +68,32 @@ When setting up a new Mac, you may want to set some sensible macOS defaults:
 When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course):
 
 ```bash
-./brew.sh
+$ ./brew.sh
 ```
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
 
+### GPG for Git on macOS
 
+#### Setup
+
+1. Install [GPG Keychain](https://gpgtools.org) -- you should do a customized install and deselect GPGMail.
+2. Create or import a key (if exists or from another host).
+3. Run `gpg --list-secret-keys` and look for sec, use the key ID for the next step.
+4. Configure `git` to use GPG -- replace the key with the one from `gpg --list-secret-keys`
+
+```
+$ git config --global gpg.program /usr/local/MacGPG2/bin/gpg2
+$ git config --global user.signingkey <gpg key ID, e.g. A6B167E1> 
+$ git config --global commit.gpgsign true 
+```
+#### Add public GPG key on Github
+
+```
+open https://github.com/settings/keys
+```
+
+![Add public GPG key on Github](img/public-gpg-key-on-github.png)
 
 ## Author
 
