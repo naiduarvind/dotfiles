@@ -1,6 +1,6 @@
 # Arvind’s dotfiles
 
-![Screenshot of my shell prompt](img/cmd.png)
+![Screenshot of my shell prompt](img/terminal.gif)
 
 ## Installation
 
