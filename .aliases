@@ -46,6 +46,9 @@ alias sudo='sudo '
 # Enable aliases for kubectl
 alias k='kubectl'
 
+# Enable aliases for skaffold
+alias s='skaffold'
+
 # Get week number
 alias week='date +%V'
 
