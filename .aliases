@@ -43,6 +43,9 @@ alias egrep='egrep --color=auto'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Enable aliases for kubectl
+alias k='kubectl'
+
 # Get week number
 alias week='date +%V'
 
