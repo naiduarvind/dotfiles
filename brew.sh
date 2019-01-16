@@ -41,7 +41,6 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -50,39 +49,42 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
+# brew uninstall aircrack-ng
+# brew uninstall bfg
+# brew uninstall binutils
+# brew uninstall binwalk
+# brew uninstall cifer
+# brew uninstall dex2jar
+# brew uninstall dns2tcp
+# brew uninstall fcrackzip
+# brew uninstall foremost
+# brew uninstall hashpump
+# brew uninstall hydra
+# brew uninstall john
+# brew uninstall knock
+# brew uninstall netpbm
+# brew uninstall nmap
+# brew uninstall pngcheck
+# brew uninstall socat
+# brew uninstall sqlmap
+# brew uninstall tcpflow
+# brew uninstall tcpreplay
+# brew uninstall tcptrace
+# brew uninstall ucspi-tcp
+# brew uninstall xpdf
+# brew uninstall xz
 
 # Install other useful binaries.
 brew install ack
+brew install awscli
 brew install git
 brew install git-lfs
+brew install go
+brew install eksctl
 brew install imagemagick --with-webp
 brew install kubectl
-brew install lua
-brew install lynx
+brew install kubectx
+qbrew install lua
 brew install p7zip
 brew install pigz
 brew install pv
@@ -94,6 +96,12 @@ brew install stormssh
 brew install tree
 brew install vbindiff
 brew install zopfli
+brew install zsh
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+brew install skaffold
+brew install mysql
+brew install shpotify
 
 # Remove outdated versions from the cellar.
 brew cleanup
