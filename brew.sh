@@ -40,39 +40,12 @@ brew install gnupg
 brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
-brew install screen
 
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-# brew uninstall aircrack-ng
-# brew uninstall bfg
-# brew uninstall binutils
-# brew uninstall binwalk
-# brew uninstall cifer
-# brew uninstall dex2jar
-# brew uninstall dns2tcp
-# brew uninstall fcrackzip
-# brew uninstall foremost
-# brew uninstall hashpump
-# brew uninstall hydra
-# brew uninstall john
-# brew uninstall knock
-# brew uninstall netpbm
-# brew uninstall nmap
-# brew uninstall pngcheck
-# brew uninstall socat
-# brew uninstall sqlmap
-# brew uninstall tcpflow
-# brew uninstall tcpreplay
-# brew uninstall tcptrace
-# brew uninstall ucspi-tcp
-# brew uninstall xpdf
-# brew uninstall xz
 
 # Install other useful binaries.
 brew install ack
@@ -102,6 +75,8 @@ brew install zsh-syntax-highlighting
 brew install skaffold
 brew install mysql
 brew install shpotify
+brew install mkcert
+brew install mydumper
 
 # Remove outdated versions from the cellar.
 brew cleanup
