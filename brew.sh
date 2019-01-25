@@ -14,15 +14,12 @@ brew install coreutils
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
-brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
@@ -50,14 +47,25 @@ brew install woff2
 # Install other useful binaries.
 brew install ack
 brew install awscli
+brew install autojump
+brew install eksctl
+brew install gcc
 brew install git
 brew install git-lfs
 brew install go
-brew install eksctl
+brew install glide
 brew install imagemagick --with-webp
+brew install jasper
 brew install kubectl
 brew install kubectx
-qbrew install lua
+brew install kubernetes-helm
+brew install lua
+brew install mkcert
+brew install mydumper
+brew install mysql
+brew install node
+brew install nss
+brew install packer
 brew install p7zip
 brew install pigz
 brew install pv
@@ -66,17 +74,15 @@ brew install rlwrap
 brew install skaffold
 brew install ssh-copy-id
 brew install stormssh
+brew install skaffold
+brew install shpotify
+brew install ssdeep
 brew install tree
 brew install vbindiff
 brew install zopfli
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
-brew install skaffold
-brew install mysql
-brew install shpotify
-brew install mkcert
-brew install mydumper
 
 # Remove outdated versions from the cellar.
 brew cleanup
