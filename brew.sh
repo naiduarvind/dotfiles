@@ -56,6 +56,7 @@ brew install go
 brew install glide
 brew install imagemagick --with-webp
 brew install jasper
+brew install jq
 brew install kubectl
 brew install kubectx
 brew install kubernetes-helm
@@ -73,6 +74,7 @@ brew install rename
 brew install rlwrap
 brew install skaffold
 brew install ssh-copy-id
+brew install stern
 brew install stormssh
 brew install skaffold
 brew install shpotify
