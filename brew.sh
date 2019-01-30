@@ -49,6 +49,7 @@ brew install ack
 brew install awscli
 brew install autojump
 brew install eksctl
+brew install fx
 brew install gcc
 brew install git
 brew install git-lfs
