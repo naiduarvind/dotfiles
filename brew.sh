@@ -82,6 +82,7 @@ brew install shpotify
 brew install ssdeep
 brew install tree
 brew install vbindiff
+brew install watch
 brew install zopfli
 brew install zsh
 brew install zsh-completions
