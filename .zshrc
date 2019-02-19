@@ -114,16 +114,24 @@ alias week='date +%V'
 alias update='sudo softwareupdate -i -a --restart; brew update; brew upgrade; brew cleanup'
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# aliases to view logs of dns services in Kubernetes (kubedns).
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-alias klkubedns='kubectl logs --namespace=kube-system $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name | head -1) -c kubedns'
-alias kldnsmasq='kubectl logs --namespace=kube-system $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name | head -1) -c dnsmasq'
-alias klsidecar='kubectl logs --namespace=kube-system $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name | head -1) -c sidecar'
-
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # alias to view logs of dns service in Kubernetes (coredns).
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-alias klcoredns='for p in $(kubectl get pods --namespace=kube-system -l k8s-app=coredns -o name); do kubectl logs --namespace=kube-system $p; done'
+alias sterncoredns='stern -l k8s-app=coredns'
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# alias to view logs of LDE application in Kubernetes.
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+alias sternlde='stern -l app=learndot'
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# alias to view logs of Nginx in Kubernetes.
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+alias sternnginx='stern --all-namespaces -l app=nginx-ingress'
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# alias to view logs of dns service in Kubernetes (kube-dns).
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+alias sternkubedns='stern --namespace ku-l k8s-app=kube-dns'
 
 ###########################################################################################################################################################################
 # CUSTOM EXPORTS
