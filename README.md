@@ -1,6 +1,6 @@
-# Arvind’s dotfiles
+# Minulle (dot)files
 
-![Screenshot of my shell prompt](img/terminal.gif)
+<div style="text-align:center"><img src ="img/terminal.gif"/></div>
 
 ## Installation
 
