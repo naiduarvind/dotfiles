@@ -94,6 +94,11 @@ source ~/.zsh_functions
 source ~/.zsh_gcloud_functions
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# load custom gcloud prompt into zsh shell.
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+source ~/.oh-my-zsh/custom/plugins/zsh-gcloud-prompt/gcloud.zsh
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # load custom Helm functions into zsh shell.
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 source ~/.zsh_helm_functions
@@ -171,20 +176,8 @@ export GPG_TTY=$(tty);
 # CUSTOM POWERLINE VISUALIZATIONS
 ###########################################################################################################################################################################
 
-prompt_zsh_showStatus () {
-	local color='%F{white}'
-  state=`osascript -e 'tell application "Spotify" to player state as string'`;
-  if [ $state = "playing" ]; then
-    artist=`osascript -e 'tell application "Spotify" to artist of current track as string'`;
-    track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
-
-      echo -n "%{$color%} $artist - $track " ; 
-
-  fi
-}
-
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status user aws kubecontext time ram os_icon battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws kubecontext time ram battery)
 
 POWERLEVEL9K_BATTERY_ICON='\uf1e6'
 POWERLEVEL9K_BATTERY_CHARGING='yellow'
@@ -194,9 +187,6 @@ POWERLEVEL9K_BATTERY_LOW_COLOR='red'
 
 POWERLEVEL9K_KUBECONTEXT_BACKGROUND="red3"
 POWERLEVEL9K_KUBECONTEXT_FOREGROUND="white"
-
-POWERLEVEL9K_OS_ICON_BACKGROUND="grey"
-POWERLEVEL9K_OS_ICON_FOREGROUND="white"
 
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 
