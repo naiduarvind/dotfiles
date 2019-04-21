@@ -177,13 +177,17 @@ export GPG_TTY=$(tty);
 ###########################################################################################################################################################################
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws kubecontext time ram battery)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws kubecontext custom_gcloud_prompt time ram battery)
 
 POWERLEVEL9K_BATTERY_ICON='\uf1e6'
 POWERLEVEL9K_BATTERY_CHARGING='yellow'
 POWERLEVEL9K_BATTERY_CHARGED='green'
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+
+POWERLEVEL9K_CUSTOM_GCLOUD_PROMPT="echo $ZSH_GCLOUD_PROMPT"
+POWERLEVEL9K_CUSTOM_GCLOUD_PROMPT_BACKGROUND="grey"
+POWERLEVEL9K_CUSTOM_GCLOUD_PROMPT_FOREGROUND="white"
 
 POWERLEVEL9K_KUBECONTEXT_BACKGROUND="red3"
 POWERLEVEL9K_KUBECONTEXT_FOREGROUND="white"
