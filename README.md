@@ -24,6 +24,16 @@ $ ./brew.sh
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones.
 
+## Packages
+
+### Brew
+
+### Python
+
+### Node.js
+
+### Custom
+
 ## Author
 
 | [![twitter/rvine_naidu](https://avatars2.githubusercontent.com/u/6829472?s=100&v=4)](http://twitter.com/rvine_naidu "Follow @rvine_naidu on Twitter") |
